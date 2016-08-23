@@ -2,14 +2,14 @@ import java.util.*;
 
 public abstract class ContainmentUnit {
   private String name;
-  private ArrayList ghosts;
+  protected List<Ghost> ghosts;
   private boolean poweredOn;
   protected String generation;
 
   public ContainmentUnit(String name) {
     this.name = name;
     poweredOn = false;
-    ghosts = new ArrayList();
+    ghosts = new ArrayList<Ghost>();
     generation = "";
   }
 
@@ -34,5 +34,6 @@ public abstract class ContainmentUnit {
     return ghosts.size();
   }
 
+  public abstract Ghost[] export();
   public abstract boolean hasReachedCapacity();
 }

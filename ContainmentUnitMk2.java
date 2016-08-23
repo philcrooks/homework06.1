@@ -6,6 +6,10 @@ public class ContainmentUnitMk2 extends ContainmentUnit {
     generation = "Mark II";
   }
 
+  public Ghost[] export(Ghost[] ghosts) {
+    // return ghosts.toArray(ghosts);
+  }
+
   public boolean hasReachedCapacity() {
     // No-one knows what the capaciity of the Mk1 unit i.
     return numberOfGhosts() >= CAPACITY;
