@@ -57,8 +57,8 @@ public class ContainmentTestMk2 {
     ges.addGhost(ghost);
     ges.addGhost(zuul);
     ges.addGhost(stayPuft);
-    Ghost[] ghosts = new Ghost[ges.numberOfGhosts()];
-    ghosts = ges.export(ghosts);
+    // Ghost[] ghosts = new Ghost[ges.numberOfGhosts()];
+    Ghost[] ghosts = ges.export();
     assertEquals(3, ghosts.length);
   }
 
@@ -69,8 +69,9 @@ public class ContainmentTestMk2 {
     ges.powerOn();
     ges.addGhost(ghost);
     ges.addGhost(zuul);
-    Ghost[] ghosts = new Ghost[ges.numberOfGhosts()];
-    ghosts = ges.export(ghosts);
-    assertEquals(ghosts[0].name, "Zuul");
+    ges.addGhost(stayPuft);
+    // Ghost[] ghosts = new Ghost[ges.numberOfGhosts()];
+    Ghost[] ghosts = ges.export();
+    assertEquals(ghosts[1].name, "Zuul");
   }
 }

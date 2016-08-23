@@ -81,6 +81,6 @@ public class ContainmentTestMk1 {
     ges.addGhost(zuul);
     ges.addGhost(stayPuft);
     Ghost[] ghosts = ges.export();
-    assertEquals(ghosts[0].name, "Zuul");
+    assertEquals(ghosts[1].name, "Zuul");
   }
 }

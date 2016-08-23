@@ -6,8 +6,10 @@ public class ContainmentUnitMk2 extends ContainmentUnit {
     generation = "Mark II";
   }
 
-  public Ghost[] export(Ghost[] ghosts) {
-    // return ghosts.toArray(ghosts);
+  public Ghost[] export() {
+    Ghost[] returnGhosts = new Ghost[numberOfGhosts()];
+    returnGhosts = this.ghosts.toArray(returnGhosts);
+    return returnGhosts;
   }
 
   public boolean hasReachedCapacity() {
